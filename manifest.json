@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "AI Overview Content Analyzer",
+  "version": "1.0",
+  "description": "Analyze Google AI Overview questions for content creation opportunities",
+
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "https://www.google.com/*",
+    "https://google.com/*"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Analyze AI Overview Questions"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/search*", "https://google.com/search*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+/* Styles for AI Overview Content Analyzer Extension */
+
+/* Score badges added to questions */
+.ai-analyzer-badge {
+    display: inline-block !important;
+    padding: 3px 8px !important;
+    margin-left: 8px !important;
+    border-radius: 4px !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    color: white !important;
+    cursor: help !important;
+    transition: transform 0.2s ease !important;
+}
+
+.ai-analyzer-badge:hover {
+    transform: scale(1.1) !important;
+}
+
+/* Question highlighting */
+.ai-analyzer-question {
+    border-left: 3px solid #667eea !important;
+    padding-left: 8px !important;
+    margin: 4px 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.ai-analyzer-question:hover {
+    background-color: rgba(102, 126, 234, 0.05) !important;
+}
+
+/* Notification animations */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.ai-analyzer-notification {
+    animation: slideInRight 0.3s ease-out !important;
+}
+
+/* Summary panel styles */
+.ai-analyzer-summary {
+    position: fixed !important;
+    top: 120px !important;
+    right: 20px !important;
+    background: white !important;
+    border: 2px solid #e5e7eb !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    z-index: 9999 !important;
+    max-width: 320px !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.ai-analyzer-summary h3 {
+    margin: 0 0 12px 0 !important;
+    color: #1f2937 !important;
+    font-size: 16px !important;
+}
+
+.ai-analyzer-summary p {
+    margin: 4px 0 !important;
+    font-size: 14px !important;
+    color: #374151 !important;
+}
+
+.ai-analyzer-close-btn {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    background: none !important;
+    border: none !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    color: #6b7280 !important;
+    padding: 0 !important;
+    width: 24px !important;
+    height: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.ai-analyzer-close-btn:hover {
+    color: #ef4444 !important;
+}
+
+/* Score color classes */
+.score-easy {
+    background-color: #22c55e !important;
+}
+
+.score-medium {
+    background-color: #f59e0b !important;
+}
+
+.score-hard {
+    background-color: #ef4444 !important;
+}
+
+.score-very-hard {
+    background-color: #dc2626 !important;
+}
+
+.score-standard {
+    background-color: #6b7280 !important;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .ai-analyzer-notification,
+    .ai-analyzer-summary {
+        right: 10px !important;
+        left: 10px !important;
+        max-width: none !important;
+    }
+}
+
+/* Smooth transitions for all analyzer elements */
+.ai-analyzer-badge,
+.ai-analyzer-question,
+.ai-analyzer-notification,
+.ai-analyzer-summary {
+    transition: all 0.3s ease !important;
+}
+
+/* Focus styles for accessibility */
+.ai-analyzer-badge:focus,
+button:focus {
+    outline: 2px solid #667eea !important;
+    outline-offset: 2px !important;
+}
